@@ -14,7 +14,9 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
   const [bubbles, setBubbles] = useState([])
   const [showForYouBtn, setShowForYouBtn] = useState(false)
-  const birthdayDate = new Date("April 28, 2025") // Change this date accordingly
+  // Set countdown target to today's date (so countdown immediately finishes)
+  // You can change this back to any future date if you want a future countdown
+  const birthdayDate = new Date()
   const audioRef = useRef(null)
 
   // For testing
