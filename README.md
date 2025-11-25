@@ -57,6 +57,21 @@ Make sure to update the target date in `Home` component if you want to reuse thi
 
 ---
 
+## 📄 Static preview
+
+A simple static `index.html` file has been added at the project root to provide a lightweight, standalone preview of the site's homepage (countdown, celebration card, confetti and a background audio reference to `/birthday.mp3`).
+
+How to open the static preview:
+
+1. Ensure `public/birthday.mp3` exists (the Next app already references this audio). If not available, remove or rename the audio reference in `index.html`.
+2. Open `index.html` in your browser (double-click or right-click -> Open with → browser) or run a small static server (e.g., `npx serve .`).
+
+Notes:
+- The `index.html` is a standalone approximation of the React/Next UI meant for quick previews and sharing with non-Next environments. It does not depend on Next.js or Tailwind but aims to visually match the app's look and key interactions.
+
+
+---
+
 ## 🌐 Connect with Me
 
 Follow for more such creative and code-based content!
