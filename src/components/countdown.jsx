@@ -24,6 +24,12 @@ export default function Countdown({ targetDate, onCountdownEnd }) {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate))
 
   useEffect(() => {
+    // If the target time has already passed when the component mounts
+    // call onCountdownEnd immediately so parent can show the "For you" button
+    if (!timeLeft || Object.keys(timeLeft).length <= 0) {
+      onCountdownEnd()
+      return
+    }
     const timer = setTimeout(() => {
       const updated = calculateTimeLeft(targetDate)
 
